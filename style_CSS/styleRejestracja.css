@@ -1,0 +1,70 @@
+body {
+    background-image: url('../media/tlo.jpg');
+    padding-top: 20px;
+    color: #FFF;
+}
+
+.oknoRejestracji {
+    width: 406px;
+    max-width: 406px;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 0px 25px 25px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    color: black;
+}
+
+.rejestracja {
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.rejestracjaOpis {
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+input[type=text], input[type=password], input[type=number] {
+    width: 330px;
+    height: 30px;
+    border-radius: 10px;
+    background: #F5F5F5;
+    padding: 0 10px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+}
+
+input[type=submit] {
+    width: 355px;
+    height: 35px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: block;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+.regulamin {
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+}
+
