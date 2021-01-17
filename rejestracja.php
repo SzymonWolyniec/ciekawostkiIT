@@ -113,7 +113,7 @@
 		if($wszystko_Ok)
 		{
 			//Sprawdzenie czy dany uzytkownik już nie istnieje w BD
-			require_once"connectBD.php";
+			require_once"connectDB.php";
 			mysqli_report(MYSQLI_REPORT_STRICT);
 			try
 			{
@@ -127,7 +127,7 @@
 				{
 					//sprawdzanie loginu - czy jest w bazie
 					$login = htmlentities($login, ENT_QUOTES, "UTF-8");
-					$rezultat=$polaczenie->query(sprintf("SELECT id FROM uzytkownik WHERE login='%s'",mysqli_real_escape_string($polaczenie,$login)));	
+					$rezultat=$polaczenie->query(sprintf("SELECT id FROM uzytkownicy WHERE login='%s'",mysqli_real_escape_string($polaczenie,$login)));	
 					if(!$rezultat) throw new Exception($polaczenie->error);
 					$ile_login = $rezultat->num_rows;
 					if($ile_login>0)
@@ -139,7 +139,7 @@
 
 					//sprawdzanie maila - czy jest w bazie
 					$email = htmlentities($email, ENT_QUOTES, "UTF-8");
-					$rezultat=$polaczenie->query(sprintf("SELECT id FROM uzytkownik WHERE email='%s'",mysqli_real_escape_string($polaczenie,$email)));	
+					$rezultat=$polaczenie->query(sprintf("SELECT id FROM uzytkownicy WHERE email='%s'",mysqli_real_escape_string($polaczenie,$email)));	
 					if(!$rezultat) throw new Exception($polaczenie->error);
 					$ile_email = $rezultat->num_rows;
 					if($ile_email>0)
@@ -152,7 +152,7 @@
 					if($wszystko_Ok==true)
 					{	
 
-						if ($polaczenie->query("INSERT INTO uzytkownik VALUES (NULL, '$login', '$h_haslo', '$email', '$imie', '$nazwisko', '$wiek')"))
+						if ($polaczenie->query("INSERT INTO uzytkownicy VALUES (NULL, '$login', '$h_haslo', '$email', '$imie', '$nazwisko', '$wiek', 1)"))
 						{
 							$_SESSION['udanarejestracja']=true;
 							header('Location: rejestracjaPoprawna.php');

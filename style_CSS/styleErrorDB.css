@@ -1,0 +1,39 @@
+body {
+    background-image: url('../media/tlo.jpg');
+    padding-top: 20px;
+    color: #FFF;
+}
+
+.oknoErrorDB {
+    width: 406px;
+    max-width: 406px;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 0px 25px 25px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    color: black;
+}
+
+.errorInfo, .errorDevelopment {
+    font-size: 35px;
+    padding-top: 20px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.errorPath {
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+a {
+    margin: auto;
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+}

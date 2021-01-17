@@ -1,47 +1,62 @@
 <?php
-	session_start();
+session_start();
+
+require_once('libs/Smarty.class.php');
+$smarty = new Smarty();
+$smarty->template_dir = 'views';
+$smarty->compile_dir = 'tmp';
+$smarty->cache_dir = 'cache';
+$smarty->clearCache('index.tpl');
+
+	// Creating SuperAdmin if no users in DB
+	require_once"connectDB.php";
+	mysqli_report(MYSQLI_REPORT_STRICT);
+	// Sprawdzenie połączenia z BD
+	try
+	{
+		$polaczenie = new mysqli($host,$db_user,$db_password,$db_name);
+	
+		if($polaczenie->connect_errno!=0)
+		{
+			throw new Exception(mysqli_connect_errno());
+		}
+		else
+		{
+			if($rezultat = $polaczenie->query("SELECT * FROM uzytkownicy"))
+			{
+				$iluUserowDB = $rezultat->num_rows;
+            	if($iluUserowDB == 0)
+					{
+						header('Location: createSuperAdmin.php');
+						exit();
+					}
+			}	
+	
+			$rezultat->free_result();
+			$polaczenie->close();
+		}		
+	}
+	catch(Exception $e)
+	{
+		$_SESSION['errorDBDevelopment'] = "Error: ".$e."\n";
+		$_SESSION['errorDBPath'] = "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+		header("Location: errorDB.php");
+		exit();		
+	}       
+	
+
+	
+	// Auto login
 	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']=true))
 	{
 		header('Location: profil.php');
 		exit();
 	}	
-	
-?>
 
-
-<!DOCTYPE HTML>
-<html lang="pl">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<link rel="stylesheet" href="style_CSS/style.css">
-	<title>Ciekawostki IT - logowanie</title>
-	
-</head>
-
-<body>
-	<div class="oknoLogowania">
-		<form action="zaloguj.php" method="post">
-					
-			<div class="zaloguj">Zaloguj się!</div>
-			<div class="zalogujOpis">Poznawaj ciekawostki z branży IT za darmo !</div>
-					
-				
-			<input type="text" placeholder="Login" name="login" /> 
-			<input type="password" placeholder ="Hasło" name="haslo"/> 
-			
-
-			<input type="submit" value="Zaloguj się" />
-		</form>
+	if(isset($_SESSION['blad']))
+	{
+		$smarty->assign('bladLogowanie',$_SESSION['blad']);
+	}
 		
-		<div class="rejestracjaLink">
-			<a href="rejestracja.php" >Rejestracja - załóż darmowe konto!</a>
-		</div>
-		<?php
-		if(isset($_SESSION['blad']))
-			echo $_SESSION['blad'];
-		?>
-	</div>
-
-</body>
-</html>
+	$smarty->display('index.tpl');
+?>

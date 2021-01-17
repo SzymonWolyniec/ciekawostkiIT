@@ -4,7 +4,7 @@ body {
     color: #FFF;
 }
 
-.oknoLogowania {
+.oknoRejestracji {
     width: 406px;
     max-width: 406px;
     margin: 0 auto;
@@ -16,20 +16,20 @@ body {
     color: black;
 }
 
-.zaloguj {
+.rejestracja {
     font-size: 35px;
     font-weight: bold;
     padding-top: 20px;
     text-align: center;
 }
 
-.zalogujOpis {
+.rejestracjaOpis {
     font-size: 18px;
     margin-top: 15px;
     text-align: center;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=number] {
     width: 330px;
     height: 30px;
     border-radius: 10px;
@@ -56,12 +56,19 @@ input[type=submit] {
     display: block;
 }
 
-.bladLogowanie {
-    color: red;
+input[type=submit]:hover {
+    opacity: 0.8;
 }
 
-.rejestracjaLink, .bladLogowanie {
-    margin-top: 20px;
-    margin-bottom: 10px;
+.regulamin {
+    margin: auto;
+    margin-top: 15px;
     text-align: center;
+    font-size: 20px;
+    display: block;
+}
+
+.error {
+    color: red;
+    margin: 5px 30px;
 }
