@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS `ciekawostkiIT` 
+USE `ciekawostkiIT`;
+
+
+CREATE TABLE IF NOT EXISTS `uzytkownicy` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`login` text COLLATE utf8_polish_ci NOT NULL,
+`password` text COLLATE utf8_polish_ci NOT NULL,
+`email` text COLLATE utf8_polish_ci NOT NULL,
+`name` text COLLATE utf8_polish_ci NOT NULL,
+`surname` text COLLATE utf8_polish_ci NOT NULL,
+`age` int(3) NOT NULL,
+`permissionsLevel` int(1) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+
