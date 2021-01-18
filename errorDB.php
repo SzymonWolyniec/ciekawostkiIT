@@ -9,11 +9,12 @@ $smarty->compile_dir = 'tmp';
 $smarty->cache_dir = 'cache';
 $smarty->clearCache('errorDB.tpl');
 
-// if(isset($_SESSION['errorDBDevelopment']))
-// {
-// 	$smarty->assign('errorDBDevelopment',$_SESSION['errorDBDevelopment']);
-// 	unset($_SESSION['errorDBDevelopment']);
-// }
+// UNCOMMENT FOR DEVELOP
+if(isset($_SESSION['errorDBDevelopment']))
+{
+	$smarty->assign('errorDBDevelopment',$_SESSION['errorDBDevelopment']);
+	unset($_SESSION['errorDBDevelopment']);
+}
 
 if(isset($_SESSION['errorDBPath']))
 {

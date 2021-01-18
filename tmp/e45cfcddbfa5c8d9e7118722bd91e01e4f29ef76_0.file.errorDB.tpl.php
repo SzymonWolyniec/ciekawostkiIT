@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-17 20:23:49
+/* Smarty version 3.1.36, created on 2021-01-18 03:39:25
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\errorDB.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_60048ec5219d90_74926644',
+  'unifunc' => 'content_6004f4dd8b2a40_82983099',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e45cfcddbfa5c8d9e7118722bd91e01e4f29ef76' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\errorDB.tpl',
-      1 => 1610911414,
+      1 => 1610937554,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60048ec5219d90_74926644 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6004f4dd8b2a40_82983099 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -34,7 +34,10 @@ function content_60048ec5219d90_74926644 (Smarty_Internal_Template $_smarty_tpl)
 
 	<div class="oknoErrorDB">
 
-				<div class="errorInfo">Błąd połączenia z bazą danych. Przepraszamy.</div>
+				<div class="errorDevelopment"><?php if ((isset($_smarty_tpl->tpl_vars['errorDBDevelopment']->value))) {
+echo $_smarty_tpl->tpl_vars['errorDBDevelopment']->value;
+}?></div>
+		<div class="errorInfo">Błąd połączenia z bazą danych. Przepraszamy.</div>
         <div class="errorPath"><?php if ((isset($_smarty_tpl->tpl_vars['errorDBPath']->value))) {?>Ścieżka błędu: <?php echo $_smarty_tpl->tpl_vars['errorDBPath']->value;
 }?></div>
 		<a href="<?php if ((isset($_smarty_tpl->tpl_vars['errorDBPath']->value))) {?>//<?php echo $_smarty_tpl->tpl_vars['errorDBPath']->value;

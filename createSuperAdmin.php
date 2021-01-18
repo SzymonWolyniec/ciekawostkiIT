@@ -30,6 +30,10 @@ try
                 header('Location: index.php');
             }
         }	
+        else
+        {
+            throw new Exception(mysqli_connect_errno());
+        }
 
         $rezultat->free_result();
         $polaczenie->close();

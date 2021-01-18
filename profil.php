@@ -1,71 +1,53 @@
 <?php
-	session_start();
-	if(!isset($_SESSION['zalogowany']))
-	{ 
-		header('Location: index.php');
-		exit();
-    }
+session_start();
+    
 
-    if(isset($_POST['wyloguj']))
-	{ 
-		header('Location: wyloguj.php');
-		exit();
-    }
-    
-    
+require_once('libs/Smarty.class.php');
+$smarty = new Smarty();
+$smarty->template_dir = 'views';
+$smarty->compile_dir = 'tmp';
+$smarty->cache_dir = 'cache';
+$smarty->clearCache('profil.tpl');
+
+if(!isset($_SESSION['zalogowany']))
+{ 
+    header('Location: index.php');
+    exit();
+}
+
+if(isset($_POST['wyloguj']))
+{ 
+    header('Location: wyloguj.php');
+    exit();
+}
+
+if(isset($_POST['edytujDane']))
+{ 
+    $smarty->assign('edytujDane',true);
+}
+
+
+if(isset($_SESSION['login'])) $smarty->assign('login',$_SESSION['login']);
+if(isset($_SESSION['email'])) $smarty->assign('email',$_SESSION['email']);
+if(isset($_SESSION['imie'])) $smarty->assign('imie',$_SESSION['imie']);
+if(isset($_SESSION['nazwisko'])) $smarty->assign('nazwisko',$_SESSION['nazwisko']);
+if(isset($_SESSION['wiek'])) $smarty->assign('wiek',$_SESSION['wiek']);
+
+
+// Zapis edycji danych
+require_once "zapiszDane.php";
+// Jeśli wystąpiły błędy nie wychodź automatycznie z formularza edycji danych (tylko przycisk Anuluj)
+if($wszystko_Ok == false)
+{ 
+    $smarty->assign('edytujDane',true);
+}
+
+if(isset($_SESSION['noweDaneZapisane']))
+{
+    $smarty->assign('noweDaneZapisane', $_SESSION['noweDaneZapisane']);
+    unset($_SESSION['noweDaneZapisane']);
+   
+}
+
+$smarty->display('profil.tpl');
 ?>
-
-
-<!DOCTYPE HTML>
-<html lang = "pl">
-<head>
-	<meta charset="utf8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<link rel="stylesheet" href="style_CSS/styleProfil.css">
-	<title>Ciekawostki IT - profil użytkownika</title>
-
-</head>
-
-<body>
-	
-	<div class="oknoProfilu">
-					
-		
-		
-		    <div class="profilUzytkownika">Profil użytkownika</div>
-            
-            <table>
-                <tr>
-                    <th>Login:</th>
-                    <td><?php echo $_SESSION['login'] ?></td>
-                </tr>
-                <tr>
-                    <th>Email:</th>
-                    <td><?php echo $_SESSION['email'] ?></td>
-                </tr>
-                <tr>
-                    <th>Imię:</th>
-                    <td><?php echo $_SESSION['imie'] ?></td>
-                </tr>
-                <tr>
-                    <th>Nazwisko:</th>
-                    <td><?php echo $_SESSION['nazwisko'] ?></td>
-                </tr>
-                <tr>
-                    <th>Wiek:</th>
-                    <td><?php echo $_SESSION['wiek'] ?></td>
-                </tr>
-            </table>
-
-
-        <form  method="post">
-                        <!-- Logout button  -->
-            <input type="submit" value="Wyloguj" name="wyloguj"/>
-		</form>
-	</div>
-			
-	
-
-	
-</body>
-</html>

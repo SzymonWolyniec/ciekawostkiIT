@@ -68,3 +68,8 @@ input[type=submit]:hover {
     display: block;
 }
 
+.error {
+    color: red;
+    margin: 5px 30px;
+}
+

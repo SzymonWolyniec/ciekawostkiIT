@@ -11,7 +11,8 @@
 
 	<div class="oknoErrorDB">
 
-		{* <div class="errorDevelopment">{if isset($errorDBDevelopment)}{$errorDBDevelopment}{/if}</div> *}
+		{* UNCOMMENT FOR DEVELOP *}
+		<div class="errorDevelopment">{if isset($errorDBDevelopment)}{$errorDBDevelopment}{/if}</div>
 		<div class="errorInfo">Błąd połączenia z bazą danych. Przepraszamy.</div>
         <div class="errorPath">{if isset($errorDBPath)}Ścieżka błędu: {$errorDBPath}{/if}</div>
 		<a href="{if isset($errorDBPath)}//{$errorDBPath}{/if}">Spróbuj odświeżyć stronę
