@@ -8,9 +8,6 @@ body {
 }
 
 .oknoProfilu {
-    width: fit-content;
-    min-width: 700px;
-    margin: auto;
     margin-top: 90px;
     padding: 25px 25px 25px;
     background: #FFF;
@@ -23,36 +20,19 @@ body {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-}
-
-table {
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 25px;
-    border-spacing: 0px 5px;
-}
-
-th, td {
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-th {
-    padding-right: 50px;
+    margin-bottom: 20px;
 }
 
 .profilInfo {
+    margin-bottom: 20px;
     font-size: 25px;
     font-weight: bold;
 }
 
 .profilDane {
+    margin-bottom: 20px;
     font-size: 25px;
     word-wrap: break-word;
-    font-weight: bold;
-    /* padding-left: 20px; */
 }
 
 input[type=text], input[type=password], input[type=number] {
@@ -67,7 +47,7 @@ input[type=text], input[type=password], input[type=number] {
 }
 
 input[type=submit] {
-    width: 80%;
+    width: 60%;
     height: 35px;
     margin: auto;
     margin-top: 20px;
@@ -96,7 +76,8 @@ input[type=submit]:hover {
 
 .error {
     color: red;
-    margin: 5px 30px;
+    width: 100%;
+    margin-top: 5px
 }
 
 .status {
@@ -118,8 +99,7 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-
- /* .container {
+/* .container {
     display: table;
 }
 

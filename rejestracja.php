@@ -199,6 +199,7 @@ if(isset($_POST['email']))
 	}		
 }
 
+$smarty->assign('activeNavItem',"rejestracja");
 $smarty->display('rejestracja.tpl');
 
 ?>

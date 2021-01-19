@@ -1,26 +1,27 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-19 01:32:29
+/* Smarty version 3.1.36, created on 2021-01-19 23:52:31
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\profil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_6006289d23dd63_99203978',
+  'unifunc' => 'content_600762aff0e132_04903418',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31761ae822d6cd073b405152110174bf7efdbf70' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\profil.tpl',
-      1 => 1611016346,
+      1 => 1611096749,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:navBarLogged.tpl' => 1,
   ),
 ),false)) {
-function content_6006289d23dd63_99203978 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600762aff0e132_04903418 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -38,228 +39,223 @@ function content_6006289d23dd63_99203978 (Smarty_Internal_Template $_smarty_tpl)
 <body>
     
     <header>
-
-		<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-		
-			<a class="navbar-brand" href="index.php"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-2 align-bottom" alt="">Ciekawostki.it</a>
-		
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Włącznik paska nawigacji">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		
-			<div class="collapse navbar-collapse" id="mainmenu">
-			
-				<ul class="navbar-nav mr-auto">
-				
-					<li class="nav-item mr-2">
-						<a class="nav-link" href="index.php"> Start </a>
-					</li>
-					
-					<li class="nav-item active mr-2">
-						<a class="nav-link" href="profil.php"> Profil </a>
-					</li>
-
-                    <li class="nav-item mr-2">
-						<a class="nav-link" href=""> Edycja danych </a>
-					</li>
-
-					<li class="nav-item mr-2">
-						<a class="nav-link" href="regulamin.php"> Regulamin </a>
-					</li>
-
-                    <li class="nav-item">
-						<a class="nav-link" href="wyloguj.php"> Wyloguj </a>
-					</li>
-				
-				</ul>
-			
-			</div>
-		
-		</nav>
+        <?php $_smarty_tpl->_subTemplateRender('file:navBarLogged.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
     </header>
 	
     
     
-	<main class="oknoProfilu">
+	<main>
         <?php if (!(isset($_smarty_tpl->tpl_vars['edytujDane']->value))) {?>    
-            <div class="profilUzytkownika">Profil użytkownika</div>
-                
-            <div class="container">
-                <div class="row">
-                                        <div class="col-sm-6 profilInfo">
-                        Login:
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 m-auto">
+                    <div class="oknoProfilu">
+                        <div class="profilUzytkownika">Profil użytkownika</div>
+                            
+                        <div class="container">
+
+                            <div class="row">
+                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Login:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {
 echo $_smarty_tpl->tpl_vars['login']->value;
 }?></div>
-                    </div>
-                </div>
+                                </div>
+                            </div>
 
 
-                <div class="row">
-                                        <div class="col-sm-6 profilInfo">
-                        Email:
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['email']->value))) {
+                            <div class="row">
+                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Email:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['email']->value))) {
 echo $_smarty_tpl->tpl_vars['email']->value;
 }?></div>
-                    </div>
-                </div>
+                                </div>
+                            </div>
 
 
-                <div class="row">
-                                            <div class="col-sm-6 profilInfo">
-                        Imię:
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['imie']->value))) {
+                            <div class="row">
+                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Imię:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['imie']->value))) {
 echo $_smarty_tpl->tpl_vars['imie']->value;
 }?></div>
-                    </div>
-                </div>
+                                </div>
+                            </div>
 
 
-                <div class="row">
-                                        <div class="col-sm-6 profilInfo">
-                        Nazwisko:
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['nazwisko']->value))) {
+                            <div class="row">
+                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Nazwisko:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['nazwisko']->value))) {
 echo $_smarty_tpl->tpl_vars['nazwisko']->value;
 }?></div>
-                    </div>
+                                </div>
 
 
-                </div>
-                <div class="row">
-                                        <div class="col-sm-6 profilInfo">
-                        Wiek:
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['wiek']->value))) {
+                            </div>
+                            <div class="row">
+                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Wiek:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['wiek']->value))) {
 echo $_smarty_tpl->tpl_vars['wiek']->value;
 }?></div>
-                    </div>
-                </div>
-            </div>
+                                </div>
+                            </div>
 
-            <div class="status"><?php if ((isset($_smarty_tpl->tpl_vars['noweDaneZapisane']->value))) {
+                            <div class="row">
+                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Funkcja:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['funkcja']->value))) {
+echo $_smarty_tpl->tpl_vars['funkcja']->value;
+}?></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="status"><?php if ((isset($_smarty_tpl->tpl_vars['noweDaneZapisane']->value))) {
 echo $_smarty_tpl->tpl_vars['noweDaneZapisane']->value;
 }?></div>
 
 
-            <form  method="post">
-                <!-- Edit button  -->
-                <input type="submit" value="Edytuj dane" name="edytujDane"/>
-                <!-- Logout button  -->
-                <input type="submit" value="Wyloguj" name="wyloguj"/>
-            </form>
+                        <form  method="get">
+                            <!-- Edit button  -->
+                            <input type="submit" value="Edytuj dane" name="edytujDane"/>
+                            <!-- Logout button  -->
+                            <input type="submit" value="Wyloguj" name="wyloguj"/>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <?php } else { ?>
 
-            <div class="profilUzytkownika">Edycja profilu użytkownika</div>
-            <form method="post">
-                <!-- Login input -->
-                <div class="loginEdycja"><?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {
+        <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-9 col-sm-12 m-auto">
+                    <div class="oknoProfilu">
+
+                            <div class="profilUzytkownika">Edycja profilu użytkownika</div>
+                            <form method="post">
+                                <!-- Login input -->
+                                <div class="loginEdycja"><?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {
 echo $_smarty_tpl->tpl_vars['login']->value;
 }?></div>
-                
+                                
 
-                <!-- Mail input -->
-                <input type="text" placeholder="E-mail" value="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_email']->value))) {
+                                <!-- Mail input -->
+                                <input type="text" placeholder="E-mail" value="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_email']->value))) {
 echo $_smarty_tpl->tpl_vars['edycjaDanych_email']->value;
 } elseif ((isset($_smarty_tpl->tpl_vars['email']->value))) {
 echo $_smarty_tpl->tpl_vars['email']->value;
 }?>" name="email"/>
 
-                <div class="error">
-                <?php if ((isset($_smarty_tpl->tpl_vars['e_email']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_email']->value;?>
+                                <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_email']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_email']->value;?>
  <?php }?>
-                </div>
-                
-                <!-- Name input -->
-                <input type="text" placeholder ="Imię" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_imie']->value))) {
+                                </div>
+                                
+                                <!-- Name input -->
+                                <input type="text" placeholder ="Imię" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_imie']->value))) {
 echo $_smarty_tpl->tpl_vars['edycjaDanych_imie']->value;
 } elseif ((isset($_smarty_tpl->tpl_vars['imie']->value))) {
 echo $_smarty_tpl->tpl_vars['imie']->value;
 }?>" name="imie"/>
-                
-                <div class="error">
-                <?php if ((isset($_smarty_tpl->tpl_vars['e_imie']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_imie']->value;?>
+                                
+                                <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_imie']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_imie']->value;?>
  <?php }?>
-                </div>
-                    
-                <!-- Surname input -->
-                <input type="text" placeholder ="Nazwisko" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_nazwisko']->value))) {
+                                </div>
+                                    
+                                <!-- Surname input -->
+                                <input type="text" placeholder ="Nazwisko" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_nazwisko']->value))) {
 echo $_smarty_tpl->tpl_vars['edycjaDanych_nazwisko']->value;
 } elseif ((isset($_smarty_tpl->tpl_vars['nazwisko']->value))) {
 echo $_smarty_tpl->tpl_vars['nazwisko']->value;
 }?>" name="nazwisko"/>
-                
-                <div class="error">
-                <?php if ((isset($_smarty_tpl->tpl_vars['e_nazwisko']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_nazwisko']->value;?>
+                                
+                                <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_nazwisko']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_nazwisko']->value;?>
  <?php }?>
-                </div>
+                                </div>
 
-                <!-- Age input -->
-                <input type="number" placeholder ="Wiek" min="1" max="120" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_wiek']->value))) {
+                                <!-- Age input -->
+                                <input type="number" placeholder ="Wiek" min="1" max="120" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_wiek']->value))) {
 echo $_smarty_tpl->tpl_vars['edycjaDanych_wiek']->value;
 } elseif ((isset($_smarty_tpl->tpl_vars['wiek']->value))) {
 echo $_smarty_tpl->tpl_vars['wiek']->value;
 }?>" name="wiek"/>
-                <div class="error">
-                <?php if ((isset($_smarty_tpl->tpl_vars['e_wiek']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_wiek']->value;?>
+                                <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_wiek']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_wiek']->value;?>
  <?php }?>
-                </div>
+                                </div>
 
-                <div class="zmianaHaslaInfo">Zmiana hasła</div>
+                                <div class="zmianaHaslaInfo">Zmiana hasła</div>
 
-                <!-- Password input -->
-                <input type="password" placeholder="Nowe hasło" value="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_haslo1']->value))) {
+                                <!-- Password input -->
+                                <input type="password" placeholder="Nowe hasło" value="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_haslo1']->value))) {
 echo $_smarty_tpl->tpl_vars['edycjaDanych_haslo1']->value;
 }?>" name="haslo1"/>
-                
-                <div class="error">
-                <?php if ((isset($_smarty_tpl->tpl_vars['e_haslo']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_haslo']->value;?>
+                                
+                                <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_haslo']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_haslo']->value;?>
  <?php }?>
-                </div>
-                
-                <!-- Password repeat input -->
-                <input type="password" placeholder ="Powtórz nowe hasło" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_haslo2']->value))) {
+                                </div>
+                                
+                                <!-- Password repeat input -->
+                                <input type="password" placeholder ="Powtórz nowe hasło" value ="<?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_haslo2']->value))) {
 echo $_smarty_tpl->tpl_vars['edycjaDanych_haslo2']->value;
 }?>" name="haslo2"/>
-                
+                                
 
-                <!-- Regulamin -->
-                <label class="regulamin">
-                <input type="checkbox" name="regulamin" <?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_regulamin']->value))) {
+                                <!-- Regulamin -->
+                                <label class="regulamin">
+                                <input type="checkbox" name="regulamin" <?php if ((isset($_smarty_tpl->tpl_vars['edycjaDanych_regulamin']->value))) {
 echo $_smarty_tpl->tpl_vars['edycjaDanych_regulamin']->value;
 }?>/> Akceptuje <a href='regulamin.php' target="blank">regulamin.</a>
-                </label>
-                <div class="error">
-                <?php if ((isset($_smarty_tpl->tpl_vars['e_regulaminCheck']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_regulaminCheck']->value;?>
+                                </label>
+                                <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_regulaminCheck']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_regulaminCheck']->value;?>
  <?php }?>
-                </div>
+                                </div>
 
-                <!-- Curren password input -->
-                <input type="password" placeholder ="Obecne hasło" name="hasloOld"/>
-                <div class="error">
-                <?php if ((isset($_smarty_tpl->tpl_vars['e_hasloOld']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_hasloOld']->value;?>
+                                <!-- Curren password input -->
+                                <input type="password" placeholder ="Obecne hasło" name="hasloOld"/>
+                                <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_hasloOld']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_hasloOld']->value;?>
  <?php }?>
-                </div>
+                                </div>
 
-                <!-- Save button  -->
-                <input type="submit" value="Zapisz" name="zapiszDane"/>
-            </form> 
+                                <!-- Save button  -->
+                                <input type="submit" value="Zapisz" name="zapiszDane"/>
+                            </form> 
 
-            <form  method="post">
-                <!-- Cancel button  -->
-                <input type="submit" value="Anuluj" name="anulujZapiszDane"/>
-            </form>
-        
-        <?php }?>
+                            <form  action="profil.php" method="post">
+                                <!-- Cancel button  -->
+                                <input type="submit" value="Anuluj" name="anulujZapiszDane"/>
+                            </form>
+                        </diV>
+                    </diV>
+                </diV>
+            </diV>
+
+        <?php }?>       
 	</main>
 	
     <?php echo '<script'; ?>

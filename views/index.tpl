@@ -15,63 +15,40 @@
 <body>
 
 	<header>
-
-		<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-		
-			<a class="navbar-brand" href="index.php"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-2 align-bottom" alt="">Ciekawostki.it</a>
-		
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Włącznik paska nawigacji">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		
-			<div class="collapse navbar-collapse" id="mainmenu">
-			
-				<ul class="navbar-nav mr-auto">
-				
-					<li class="nav-item active mr-2">
-						<a class="nav-link" href="index.php"> Start </a>
-					</li>
-					
-					<li class="nav-item mr-2">
-						<a class="nav-link" href="rejestracja.php"> Rejestracja </a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="regulamin.php"> Regulamin </a>
-					</li>
-				
-				</ul>
-			
-			</div>
-		
-		</nav>
-	
+	{include file='navBarStart.tpl'}
 	</header>
 
-	<main class="oknoLogowania" >
-	
-		<form action="zaloguj.php" method="post">
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-6 col-md-8 col-sm-9 m-auto ">
+					<div class="oknoLogowania">
 
-			<div class="zaloguj">Zaloguj się!</div>
-			<div class="zalogujOpis">Poznawaj ciekawostki z branży IT za darmo !</div>
+							<form action="zaloguj.php" method="post">
+
+								<div class="zaloguj">Zaloguj się!</div>
+								<div class="zalogujOpis">Poznawaj ciekawostki z branży IT za darmo !</div>
 
 
-			<input type="text" placeholder="Login" name="login" /> 
-			<input type="password" placeholder ="Hasło" name="haslo"/> 
+								<input type="text" placeholder="Login" name="login" /> 
+								<input type="password" placeholder ="Hasło" name="haslo"/> 
 
-			<div class="bladLogowanie">
-                {if isset($bladLogowanie)} {$bladLogowanie} {/if}
+								<div class="bladLogowanie">
+									{if isset($bladLogowanie)} {$bladLogowanie} {/if}
+								</div>
+
+								<input type="submit" value="Zaloguj się" />
+							</form>
+
+							<div class="rejestracjaLink">
+								<a href="rejestracja.php" >Rejestracja - załóż darmowe konto!</a>
+							</div>
+					</div>	
+				</div>
 			</div>
-
-			<input type="submit" value="Zaloguj się" />
-		</form>
-
-		<div class="rejestracjaLink">
-			<a href="rejestracja.php" >Rejestracja - załóż darmowe konto!</a>
 		</div>
-
-	
 	</main>
+	
 
 
 

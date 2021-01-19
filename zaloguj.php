@@ -40,7 +40,8 @@
                     $_SESSION['email'] = $wiersz['email'];
                     $_SESSION['imie'] = $wiersz['name'];
                     $_SESSION['nazwisko'] = $wiersz['surname'];
-                    $_SESSION['wiek'] = $wiersz['age'];
+					$_SESSION['wiek'] = $wiersz['age'];
+					$_SESSION['funkcja'] = $wiersz['permissionsLevel'];
 					
 					unset($_SESSION['blad']);
 					$rezultat->free_result();

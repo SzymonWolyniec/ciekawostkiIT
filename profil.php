@@ -15,16 +15,23 @@ if(!isset($_SESSION['zalogowany']))
     exit();
 }
 
-if(isset($_POST['wyloguj']))
+if(isset($_POST['wyloguj']) || isset($_GET['wyloguj']))
 { 
     header('Location: wyloguj.php');
     exit();
 }
 
-if(isset($_POST['edytujDane']))
+if(isset($_GET['edytujDane']))
 { 
-    $smarty->assign('edytujDane',true);
+    $smarty->assign('edytujDane',"true");
+    $smarty->assign('activeNavItem',"edycjaDanych");
 }
+else
+{
+    $smarty->assign('activeNavItem',"profil");
+}
+
+
 
 
 if(isset($_SESSION['login'])) $smarty->assign('login',$_SESSION['login']);
@@ -32,6 +39,14 @@ if(isset($_SESSION['email'])) $smarty->assign('email',$_SESSION['email']);
 if(isset($_SESSION['imie'])) $smarty->assign('imie',$_SESSION['imie']);
 if(isset($_SESSION['nazwisko'])) $smarty->assign('nazwisko',$_SESSION['nazwisko']);
 if(isset($_SESSION['wiek'])) $smarty->assign('wiek',$_SESSION['wiek']);
+
+if(isset($_SESSION['funkcja']))
+{
+    
+    if($_SESSION['funkcja'] == 1) $smarty->assign('funkcja',"Użytkownik");
+    if($_SESSION['funkcja'] == 3) $smarty->assign('funkcja',"Moderator");
+    if($_SESSION['funkcja'] == 4) $smarty->assign('funkcja',"SuperAdmin");
+}
 
 if(isset($_SESSION['noweDaneZapisane']))
 {

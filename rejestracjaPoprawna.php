@@ -15,8 +15,9 @@ if((!isset($_SESSION['udanarejestracja'])))
 }	
 else
 {
-	unset($_SESSION['udanarejestracja']);
+	// unset($_SESSION['udanarejestracja']);
 }
 
+$smarty->assign('activeNavItem',"rejestracja");
 $smarty->display('rejestracjaPoprawna.tpl');
 ?>

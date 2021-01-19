@@ -1,26 +1,27 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-18 23:28:30
+/* Smarty version 3.1.36, created on 2021-01-19 23:18:05
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\rejestracja.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_60060b8e6c1e87_71774442',
+  'unifunc' => 'content_60075a9d7e6490_64939647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1be8085996b5f4756c1e9976dfcebb22134a56ee' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\rejestracja.tpl',
-      1 => 1611008889,
+      1 => 1611094680,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:navBarStart.tpl' => 1,
   ),
 ),false)) {
-function content_60060b8e6c1e87_71774442 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60075a9d7e6490_64939647 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -37,127 +38,105 @@ function content_60060b8e6c1e87_71774442 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 	
 	<header>
-	
-		<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-		
-			<a class="navbar-brand" href="index.php"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-2 align-bottom" alt="">Ciekawostki.it</a>
-		
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Włącznik paska nawigacji">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		
-			<div class="collapse navbar-collapse" id="mainmenu">
-			
-				<ul class="navbar-nav mr-auto">
-				
-					<li class="nav-item mr-2">
-						<a class="nav-link" href="index.php"> Start </a>
-					</li>
-					
-					<li class="nav-item active mr-2">
-						<a class="nav-link" href="rejestracja.php"> Rejestracja </a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="regulamin.php"> Regulamin </a>
-					</li>
-				
-				</ul>
-			
-			</div>
-		
-		</nav>
-	
+	<?php $_smarty_tpl->_subTemplateRender('file:navBarStart.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 	</header>
 
-	<main class="oknoRejestracji">
-					
-		<form  method="post">
-		<div class="rejestracja">Zarejestruj się</div>
-            <div class="rejestracjaOpis">Zarejestruj się i poznawaj ciekawostki z branży IT !</div>
-            
-            <!-- Login input -->
-			<input type="text" placeholder="Login" value="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_login']->value))) {
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-6 col-md-8 col-sm-9 m-auto">
+					<div class="oknoRejestracji">
+								
+						<form  method="post">
+						<div class="rejestracja">Zarejestruj się</div>
+							<div class="rejestracjaOpis">Zarejestruj się i poznawaj ciekawostki z branży IT za darmo !</div>
+							
+							<!-- Login input -->
+							<input type="text" placeholder="Login" value="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_login']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_login']->value;
 }?>" name="login"/>
 
-            <div class="error">
-			<?php if ((isset($_smarty_tpl->tpl_vars['e_login']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_login']->value;?>
+							<div class="error">
+							<?php if ((isset($_smarty_tpl->tpl_vars['e_login']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_login']->value;?>
  <?php }?>
-            </div>
+							</div>
 
-            <!-- Mail input -->
-			<input type="text" placeholder="E-mail" value="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_email']->value))) {
+							<!-- Mail input -->
+							<input type="text" placeholder="E-mail" value="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_email']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_email']->value;
 }?>" name="email"/>
 
-			<div class="error">
-			<?php if ((isset($_smarty_tpl->tpl_vars['e_email']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_email']->value;?>
+							<div class="error">
+							<?php if ((isset($_smarty_tpl->tpl_vars['e_email']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_email']->value;?>
  <?php }?>
-            </div>
-            
-            <!-- Password input -->
-			<input type="password" placeholder="Hasło" value="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_haslo1']->value))) {
+							</div>
+							
+							<!-- Password input -->
+							<input type="password" placeholder="Hasło" value="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_haslo1']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_haslo1']->value;
 }?>" name="haslo1"/>
-			
-            <div class="error">
-			<?php if ((isset($_smarty_tpl->tpl_vars['e_haslo']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_haslo']->value;?>
+							
+							<div class="error">
+							<?php if ((isset($_smarty_tpl->tpl_vars['e_haslo']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_haslo']->value;?>
  <?php }?>
-            </div>
-            
-            <!-- Password repeat input -->
-            <input type="password" placeholder ="Powtórz hasło" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_haslo2']->value))) {
+							</div>
+							
+							<!-- Password repeat input -->
+							<input type="password" placeholder ="Powtórz hasło" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_haslo2']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_haslo2']->value;
 }?>" name="haslo2"/>
-            
-            <!-- Name input -->
-			<input type="text" placeholder ="Imię" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_imie']->value))) {
+							
+							<!-- Name input -->
+							<input type="text" placeholder ="Imię" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_imie']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_imie']->value;
 }?>" name="imie"/>
-			
-            <div class="error">
-			<?php if ((isset($_smarty_tpl->tpl_vars['e_imie']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_imie']->value;?>
+							
+							<div class="error">
+							<?php if ((isset($_smarty_tpl->tpl_vars['e_imie']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_imie']->value;?>
  <?php }?>
-            </div>
-                
-            <!-- Surname input -->
-			<input type="text" placeholder ="Nazwisko" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_nazwisko']->value))) {
+							</div>
+								
+							<!-- Surname input -->
+							<input type="text" placeholder ="Nazwisko" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_nazwisko']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_nazwisko']->value;
 }?>" name="nazwisko"/>
-			
-            <div class="error">
-			<?php if ((isset($_smarty_tpl->tpl_vars['e_nazwisko']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_nazwisko']->value;?>
+							
+							<div class="error">
+							<?php if ((isset($_smarty_tpl->tpl_vars['e_nazwisko']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_nazwisko']->value;?>
  <?php }?>
-            </div>
+							</div>
 
-            <!-- Age input -->
-            <input type="number" placeholder ="Wiek" min="1" max="120" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_wiek']->value))) {
+							<!-- Age input -->
+							<input type="number" placeholder ="Wiek" min="1" max="120" value ="<?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_wiek']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_wiek']->value;
 }?>" name="wiek"/>
-			<div class="error">
-			<?php if ((isset($_smarty_tpl->tpl_vars['e_wiek']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_wiek']->value;?>
+							<div class="error">
+							<?php if ((isset($_smarty_tpl->tpl_vars['e_wiek']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_wiek']->value;?>
  <?php }?>
-            </div>
+							</div>
 
 
 
-            <!-- Regulamin -->
-			<label class="regulamin">
-			<input type="checkbox" name="regulamin" <?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_regulamin']->value))) {
+							<!-- Regulamin -->
+							<label class="regulamin">
+							<input type="checkbox" name="regulamin" <?php if ((isset($_smarty_tpl->tpl_vars['rejestracja_regulamin']->value))) {
 echo $_smarty_tpl->tpl_vars['rejestracja_regulamin']->value;
 }?>/> Akceptuje <a href='regulamin.php' target="blank">regulamin.</a>
-			</label>
-			<div class="error">
-			<?php if ((isset($_smarty_tpl->tpl_vars['e_regulaminCheck']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_regulaminCheck']->value;?>
+							</label>
+							<div class="error">
+							<?php if ((isset($_smarty_tpl->tpl_vars['e_regulaminCheck']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_regulaminCheck']->value;?>
  <?php }?>
-            </div>
-                
-            <!-- Submit button  -->
-			<input type="submit" value="Zarejestruj"/>
-		</form>
+							</div>
+								
+							<!-- Submit button  -->
+							<input type="submit" value="Zarejestruj"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
-			
 	
 	<?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>

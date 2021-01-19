@@ -1,26 +1,27 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-18 23:28:28
+/* Smarty version 3.1.36, created on 2021-01-19 23:16:53
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_60060b8cd74846_36004236',
+  'unifunc' => 'content_60075a559c2e50_27108280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'daea2627971821dc9a423ebd028932de1ee2db48' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\index.tpl',
-      1 => 1611008881,
+      1 => 1611094567,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:navBarStart.tpl' => 1,
   ),
 ),false)) {
-function content_60060b8cd74846_36004236 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60075a559c2e50_27108280 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 <html lang="pl">
@@ -38,64 +39,42 @@ function content_60060b8cd74846_36004236 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 
 	<header>
-
-		<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-		
-			<a class="navbar-brand" href="index.php"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-2 align-bottom" alt="">Ciekawostki.it</a>
-		
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Włącznik paska nawigacji">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		
-			<div class="collapse navbar-collapse" id="mainmenu">
-			
-				<ul class="navbar-nav mr-auto">
-				
-					<li class="nav-item active mr-2">
-						<a class="nav-link" href="index.php"> Start </a>
-					</li>
-					
-					<li class="nav-item mr-2">
-						<a class="nav-link" href="rejestracja.php"> Rejestracja </a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="regulamin.php"> Regulamin </a>
-					</li>
-				
-				</ul>
-			
-			</div>
-		
-		</nav>
-	
+	<?php $_smarty_tpl->_subTemplateRender('file:navBarStart.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 	</header>
 
-	<main class="oknoLogowania" >
-	
-		<form action="zaloguj.php" method="post">
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-6 col-md-8 col-sm-9 m-auto ">
+					<div class="oknoLogowania">
 
-			<div class="zaloguj">Zaloguj się!</div>
-			<div class="zalogujOpis">Poznawaj ciekawostki z branży IT za darmo !</div>
+							<form action="zaloguj.php" method="post">
+
+								<div class="zaloguj">Zaloguj się!</div>
+								<div class="zalogujOpis">Poznawaj ciekawostki z branży IT za darmo !</div>
 
 
-			<input type="text" placeholder="Login" name="login" /> 
-			<input type="password" placeholder ="Hasło" name="haslo"/> 
+								<input type="text" placeholder="Login" name="login" /> 
+								<input type="password" placeholder ="Hasło" name="haslo"/> 
 
-			<div class="bladLogowanie">
-                <?php if ((isset($_smarty_tpl->tpl_vars['bladLogowanie']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['bladLogowanie']->value;?>
+								<div class="bladLogowanie">
+									<?php if ((isset($_smarty_tpl->tpl_vars['bladLogowanie']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['bladLogowanie']->value;?>
  <?php }?>
+								</div>
+
+								<input type="submit" value="Zaloguj się" />
+							</form>
+
+							<div class="rejestracjaLink">
+								<a href="rejestracja.php" >Rejestracja - załóż darmowe konto!</a>
+							</div>
+					</div>	
+				</div>
 			</div>
-
-			<input type="submit" value="Zaloguj się" />
-		</form>
-
-		<div class="rejestracjaLink">
-			<a href="rejestracja.php" >Rejestracja - załóż darmowe konto!</a>
 		</div>
-
-	
 	</main>
+	
 
 
 

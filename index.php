@@ -59,5 +59,6 @@ $smarty->clearCache('index.tpl');
 		unset($_SESSION['blad']);
 	}
 		
+	$smarty->assign('activeNavItem',"start");
 	$smarty->display('index.tpl');
 ?>
