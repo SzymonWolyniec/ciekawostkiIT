@@ -25,7 +25,7 @@ $smarty->clearCache('index.tpl');
 			if($rezultat = $polaczenie->query("SELECT * FROM uzytkownicy"))
 			{
 				$iluUserowDB = $rezultat->num_rows;
-            	if($iluUserowDB == 0)
+				if($iluUserowDB == 0)
 					{
 						header('Location: createSuperAdmin.php');
 						exit();
@@ -56,6 +56,7 @@ $smarty->clearCache('index.tpl');
 	if(isset($_SESSION['blad']))
 	{
 		$smarty->assign('bladLogowanie',$_SESSION['blad']);
+		unset($_SESSION['blad']);
 	}
 		
 	$smarty->display('index.tpl');

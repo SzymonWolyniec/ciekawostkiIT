@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\bootstrap-odc-4"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ciekawostkiIT"
+	}
+}

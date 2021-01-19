@@ -33,6 +33,12 @@ if(isset($_SESSION['imie'])) $smarty->assign('imie',$_SESSION['imie']);
 if(isset($_SESSION['nazwisko'])) $smarty->assign('nazwisko',$_SESSION['nazwisko']);
 if(isset($_SESSION['wiek'])) $smarty->assign('wiek',$_SESSION['wiek']);
 
+if(isset($_SESSION['noweDaneZapisane']))
+{
+    $smarty->assign('noweDaneZapisane', $_SESSION['noweDaneZapisane']);
+    unset($_SESSION['noweDaneZapisane']);
+   
+}
 
 // Zapis edycji danych
 require_once "zapiszDane.php";
@@ -42,12 +48,7 @@ if($wszystko_Ok == false)
     $smarty->assign('edytujDane',true);
 }
 
-if(isset($_SESSION['noweDaneZapisane']))
-{
-    $smarty->assign('noweDaneZapisane', $_SESSION['noweDaneZapisane']);
-    unset($_SESSION['noweDaneZapisane']);
-   
-}
+
 
 $smarty->display('profil.tpl');
 ?>

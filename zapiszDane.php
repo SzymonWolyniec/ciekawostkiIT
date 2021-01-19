@@ -196,7 +196,8 @@ if(isset($_POST['zapiszDane']))
                         $_SESSION['nazwisko'] = $nazwisko;
                         $_SESSION['wiek'] = $wiek;
 
-                        $_SESSION['noweDaneZapisane'] = 'Zapisano nowe dane';
+						$_SESSION['noweDaneZapisane'] = 'Zapisano nowe dane';
+						
 						header('Location: profil.php');
 					}
 					else
