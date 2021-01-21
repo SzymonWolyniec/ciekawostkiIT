@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-19 23:41:00
+/* Smarty version 3.1.36, created on 2021-01-20 14:47:47
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\navBarStart.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_60075ffcdb3324_42291291',
+  'unifunc' => 'content_60083483983780_65756584',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41efcac3e8864a2c95ba4ce86f3bea1587aeb224' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\navBarStart.tpl',
-      1 => 1611096058,
+      1 => 1611150466,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60075ffcdb3324_42291291 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60083483983780_65756584 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
 		
 			<a class="navbar-brand" href="index.php"><img src="./media/logo.png" width="30" height="30" class="d-inline-block mr-2 align-bottom" alt="">Ciekawostki.it</a>

@@ -120,7 +120,7 @@
 
                             <div class="profilUzytkownika">Edycja profilu użytkownika</div>
                             <form method="post">
-                                <!-- Login input -->
+                                <!-- input -->
                                 <div class="loginEdycja">{if isset($login)}{$login}{/if}</div>
                                 
 

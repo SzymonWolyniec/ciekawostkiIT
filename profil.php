@@ -63,7 +63,10 @@ if($wszystko_Ok == false)
     $smarty->assign('edytujDane',true);
 }
 
+if(isset($_SESSION['funkcja']))
+{
+    $smarty->assign('funkcjaNumer', $_SESSION['funkcja']);
 
-
+}
 $smarty->display('profil.tpl');
 ?>

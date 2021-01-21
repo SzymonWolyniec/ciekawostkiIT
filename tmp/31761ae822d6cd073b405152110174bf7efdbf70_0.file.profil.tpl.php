@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-19 23:52:31
+/* Smarty version 3.1.36, created on 2021-01-20 22:15:23
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\profil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_600762aff0e132_04903418',
+  'unifunc' => 'content_60089d6b12b577_09855461',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31761ae822d6cd073b405152110174bf7efdbf70' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\profil.tpl',
-      1 => 1611096749,
+      1 => 1611177028,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navBarLogged.tpl' => 1,
   ),
 ),false)) {
-function content_600762aff0e132_04903418 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60089d6b12b577_09855461 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -153,7 +153,7 @@ echo $_smarty_tpl->tpl_vars['noweDaneZapisane']->value;
 
                             <div class="profilUzytkownika">Edycja profilu użytkownika</div>
                             <form method="post">
-                                <!-- Login input -->
+                                <!-- input -->
                                 <div class="loginEdycja"><?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {
 echo $_smarty_tpl->tpl_vars['login']->value;
 }?></div>

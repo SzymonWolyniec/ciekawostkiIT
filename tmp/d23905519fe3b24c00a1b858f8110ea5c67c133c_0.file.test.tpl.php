@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-20 00:48:12
+/* Smarty version 3.1.36, created on 2021-01-20 13:45:02
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\test.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_60076fbc7f2c25_65722257',
+  'unifunc' => 'content_600825ce6d9c29_16863534',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd23905519fe3b24c00a1b858f8110ea5c67c133c' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\test.tpl',
-      1 => 1611100084,
+      1 => 1611146700,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navBarStart.tpl' => 1,
   ),
 ),false)) {
-function content_60076fbc7f2c25_65722257 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600825ce6d9c29_16863534 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 <html lang = "pl">
@@ -33,6 +33,33 @@ function content_60076fbc7f2c25_65722257 (Smarty_Internal_Template $_smarty_tpl)
 	<link rel="stylesheet" href="style_CSS/styleRejestracjaPoprawna.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<title>Ciekawostki IT - rejestracja poprawna</title>
+
+  <style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  color: black;
+}
+</style>
 </head>
 
 <body>
@@ -42,18 +69,6 @@ function content_60076fbc7f2c25_65722257 (Smarty_Internal_Template $_smarty_tpl)
 ?>
 </header>
 
-<button onclick="create()">Create Heading</button>
-    <?php echo '<script'; ?>
->
-      function create() {
-        var h1 = document.createElement('h1');
-        h1.textContent = "New Heading!!!";
-        h1.setAttribute('class', 'note');
-        document.body.appendChild(h1);
-      }
-    <?php echo '</script'; ?>
->
-
     <?php
 $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby'] = new Smarty_Variable(array());
 if (true) {
@@ -61,7 +76,7 @@ for ($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'
 ?>
 
         <br>
-        Something
+        
             
     <?php
 }
@@ -72,46 +87,43 @@ for ($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'
     
     
 
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            <div class="list-group" id="list-tab" role="tablist">
-                <?php
-$_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby'] = new Smarty_Variable(array());
-if (true) {
-for ($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] = 1, $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['index'] = 0; $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] <= 15; $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration']++, $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['index']++){
-?>
-                    <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] : null);?>
-" role="tab" aria-controls="home"><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] : null);?>
-</a>
-                <?php
-}
-}
-?>
-            </div>
-        </div>
 
-        <div class="col-8">
-            <div class="tab-content" id="nav-tabContent">
-                <?php
+    <?php
 $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby'] = new Smarty_Variable(array());
 if (true) {
 for ($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] = 1, $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['index'] = 0; $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] <= 15; $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration']++, $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['index']++){
 ?>
-                <br>
-                    <div class="tab-pane fade show active" id="<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] : null);?>
-" role="tabpanel" aria-labelledby="list-home-list">Bla bla bla bla</div>
-                <?php
-}
-}
-?>
-            </div>
-        </div>
+     <button class="collapsible">Open Section <?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] : null);?>
+</button>
+    <div class="content">
+      <p><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_section_sectionLiczby']->value['iteration'] : null);?>
+. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-</div>
+    <?php
+}
+}
+?>
 
 
 
+<?php echo '<script'; ?>
+>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+<?php echo '</script'; ?>
+>
 
 
 	<?php echo '<script'; ?>

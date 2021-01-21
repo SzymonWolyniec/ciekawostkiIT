@@ -29,6 +29,30 @@
                     <li class="nav-item {if isset($activeNavItem)}{if $activeNavItem=="wyloguj"}active{/if}{/if} mr-2">
 						<a class="nav-link" href="wyloguj.php"> Wyloguj </a>
 					</li>
+
+
+					{* Only Admin and Moderators panel *}
+					{if isset($funkcjaNumer)}
+						{if $funkcjaNumer==4 || $funkcjaNumer==3}
+
+							<li class="nav-item dropdown">
+								
+								<a class="nav-link dropdown-toggle {if isset($activeNavItem)}{if $activeNavItem=="panelAdministratora"}active{/if}{/if}" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true">Panel administratora</a>
+						
+								<div class="dropdown-menu" aria-labelledby="submenu">
+						
+									<a class="dropdown-item" href="uzytkownicy.php">Użytkownicy</a>
+									<a class="dropdown-item" href="#">Dodaj artykuł</a>
+									
+									<div class="dropdown-divider"></div>
+									
+									<a class="dropdown-item" href="#">Poczta</a>
+
+								</div>
+							</li>
+					
+						{/if}
+					{/if}
 				
 				</ul>
 			

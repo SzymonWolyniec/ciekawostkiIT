@@ -9,6 +9,33 @@
 	<link rel="stylesheet" href="style_CSS/styleRejestracjaPoprawna.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<title>Ciekawostki IT - rejestracja poprawna</title>
+
+  <style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  color: black;
+}
+</style>
 </head>
 
 <body>
@@ -17,20 +44,10 @@
 	{include file='navBarStart.tpl'}
 </header>
 
-<button onclick="create()">Create Heading</button>
-    <script>
-      function create() {
-        var h1 = document.createElement('h1');
-        h1.textContent = "New Heading!!!";
-        h1.setAttribute('class', 'note');
-        document.body.appendChild(h1);
-      }
-    </script>
-
     {section name="sectionLiczby" loop=10 start=0 step=1}
 
         <br>
-        Something
+        
         {* {$smarty.section.sectionLiczby.iteration}.
         {$liczby[sectionLiczby]}
 
@@ -45,50 +62,32 @@
     {/section} *}
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            <div class="list-group" id="list-tab" role="tablist">
-                {section name="sectionLiczby" loop=15 start=0 step=1}
-                    <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#{$smarty.section.sectionLiczby.iteration}" role="tab" aria-controls="home">{$smarty.section.sectionLiczby.iteration}</a>
-                {/section}
-            </div>
-        </div>
 
-        <div class="col-8">
-            <div class="tab-content" id="nav-tabContent">
-                {section name="sectionLiczby" loop=15 start=0 step=1}
-                <br>
-                    <div class="tab-pane fade show active" id="{$smarty.section.sectionLiczby.iteration}" role="tabpanel" aria-labelledby="list-home-list">Bla bla bla bla</div>
-                {/section}
-            </div>
-        </div>
+    {section name="sectionLiczby" loop=15 start=0 step=1}
+     <button class="collapsible">Open Section {$smarty.section.sectionLiczby.iteration}</button>
+    <div class="content">
+      <p>{$smarty.section.sectionLiczby.iteration}. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-</div>
+    {/section}
 
 
 
-{* 
-<main>
-	<div class="container">
-		<div class="row">
-  <div class="col-4">
-    <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
-    </div>
-  </div>
-  <div class="col-8">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Bla bla bla bla</div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">S</div>
-    </div>
-  </div>
-</div>
-	</div>
-</main> *}
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>	

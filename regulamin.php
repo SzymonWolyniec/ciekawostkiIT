@@ -15,6 +15,12 @@ if(isset($_SESSION['zalogowany']))
     $smarty->assign('zalogowany',$_SESSION['zalogowany']);
 }
 
+
+if(isset($_SESSION['funkcja']))
+{
+    $smarty->assign('funkcjaNumer', $_SESSION['funkcja']);
+
+}
 $smarty->assign('activeNavItem',"regulamin");
 $smarty->display('regulamin.tpl');
 ?>
