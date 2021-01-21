@@ -42,7 +42,7 @@
 								<div class="dropdown-menu" aria-labelledby="submenu">
 						
 									<a class="dropdown-item" href="uzytkownicy.php">Użytkownicy</a>
-									<a class="dropdown-item" href="#">Dodaj artykuł</a>
+									<a class="dropdown-item" href="dodajArtykul.php">Dodaj artykuł</a>
 									
 									<div class="dropdown-divider"></div>
 									
