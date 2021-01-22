@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-21 21:57:51
-  from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\dodajArtykul.tpl' */
+/* Smarty version 3.1.36, created on 2021-01-22 02:17:49
+  from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\panelKontaktowy.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_6009eacf9f65f7_28360370',
+  'unifunc' => 'content_600a27bd62de73_22631411',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'cc6e1138c833c4257b3c9ddf5b358acd4c1af995' => 
+    '53afe5d109802b7bb36d8c8d8dff690459132b9b' => 
     array (
-      0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\dodajArtykul.tpl',
-      1 => 1611262645,
+      0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\panelKontaktowy.tpl',
+      1 => 1611278263,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navBarLogged.tpl' => 1,
   ),
 ),false)) {
-function content_6009eacf9f65f7_28360370 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600a27bd62de73_22631411 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -30,9 +30,9 @@ function content_6009eacf9f65f7_28360370 (Smarty_Internal_Template $_smarty_tpl)
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="style_CSS/normalize.css">
-	<link rel="stylesheet" href="style_CSS/styleDodajArtykul.css">
+	<link rel="stylesheet" href="style_CSS/stylePanelKontaktowy.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-	<title>Ciekawostki IT - dodaj artykuł</title>
+	<title>Ciekawostki IT - panel kontaktowy</title>
 </head>
 
 <body>
@@ -47,35 +47,47 @@ function content_6009eacf9f65f7_28360370 (Smarty_Internal_Template $_smarty_tpl)
         <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-9 col-sm-12 m-auto">
-                    <div class="oknoDodajArtykul">
-                        <div class="dodajArtykul">Dodawanie artykułu</div>
+                    <div class="oknoPanelKontaktowy">
+                        <div class="panelInfo">Panel kontaktowy</div>
+                        <div class="panelOpis">W celu kontaktu z administracją wypełnij poniższy formularz.</div>
 
-                        <div class="status"><?php if ((isset($_smarty_tpl->tpl_vars['artykulDodanoPoprawnie']->value))) {
-echo $_smarty_tpl->tpl_vars['artykulDodanoPoprawnie']->value;
+                        <div class="status"><?php if ((isset($_smarty_tpl->tpl_vars['wiadomoscWyslana']->value))) {
+echo $_smarty_tpl->tpl_vars['wiadomoscWyslana']->value;
 }?></div>
                         
     
                             <form method="post">
                             
-                            <div class="artykulTytulInfo">Tytuł</div>
+                            <div class="panelKontaktowyInfo">Tytuł</div>
                             <!-- Title input -->
-                            <input type="text" placeholder="Tytuł artykułu" value="<?php if ((isset($_smarty_tpl->tpl_vars['artykulTytulZap']->value))) {
-echo $_smarty_tpl->tpl_vars['artykulTytulZap']->value;
-}?>" name="artykulTytul"/>
+                            <input type="text" placeholder="Tytuł" value="<?php if ((isset($_smarty_tpl->tpl_vars['wiadomoscTytulZap']->value))) {
+echo $_smarty_tpl->tpl_vars['wiadomoscTytulZap']->value;
+}?>" name="wiadomoscTytul"/>
                             
                             <div class="error">
                                 <?php if ((isset($_smarty_tpl->tpl_vars['e_tytul']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_tytul']->value;?>
  <?php }?>
                             </div>
 
-                            <div class="artykulTextInfo">Tekst</div>
+                            <div class="panelKontaktowyInfo">Tytuł wiadomości</div>
                             <!-- Text input -->
-                            <textarea class="scrollabletextbox" placeholder="Tekst artykułu" name="artykulText"><?php if ((isset($_smarty_tpl->tpl_vars['artykulTextZap']->value))) {
-echo $_smarty_tpl->tpl_vars['artykulTextZap']->value;
+                            <textarea class="scrollabletextbox" placeholder="Tekst wiadomości" name="wiadomoscText"><?php if ((isset($_smarty_tpl->tpl_vars['wiadomoscTextZap']->value))) {
+echo $_smarty_tpl->tpl_vars['wiadomoscTextZap']->value;
 }?></textarea>
 
                             <div class="error">
                                 <?php if ((isset($_smarty_tpl->tpl_vars['e_text']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_text']->value;?>
+ <?php }?>
+                            </div>
+
+                            <div class="panelKontaktowyInfo">Email kontaktowy</div>
+                            <!-- Contacts details input -->
+                            <input type="text" placeholder="Podaj swojego emaila, na którego otrzymasz odpowiedź zwrotną" value="<?php if ((isset($_smarty_tpl->tpl_vars['emailKontaktZap']->value))) {
+echo $_smarty_tpl->tpl_vars['emailKontaktZap']->value;
+}?>" name="emailKontakt"/>
+                            
+                            <div class="error">
+                                <?php if ((isset($_smarty_tpl->tpl_vars['e_emailKontakt']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['e_emailKontakt']->value;?>
  <?php }?>
                             </div>
                         
@@ -83,10 +95,10 @@ echo $_smarty_tpl->tpl_vars['artykulTextZap']->value;
                             <div class="container-fluid">
                                 <div class="row">
                                                                         <div class="col-sm-5 col-md-4 col-lg-3 px-0">
-                                        <div class="autorInfo">Autor: </div>
+                                        <div class="uzytkownikInfo">Użytkownik: </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="autorDane"><?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {
+                                        <div class="uzytkownikDane"><?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {
 echo $_smarty_tpl->tpl_vars['login']->value;
 }?></div>
                                     </div>
@@ -95,7 +107,7 @@ echo $_smarty_tpl->tpl_vars['login']->value;
                             
 
                             <!-- Save button  -->
-                            <input type="submit" value="Zapisz" name="zapiszDodajArtykul"/>
+                            <input type="submit" value="Wyślij" name="wyslijWiadomoscKontaktowa"/>
                             </form> 
                         
                             <form  action="index.php" method="post">

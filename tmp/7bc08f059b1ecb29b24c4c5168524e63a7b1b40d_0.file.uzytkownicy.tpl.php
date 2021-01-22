@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-20 21:58:41
+/* Smarty version 3.1.36, created on 2021-01-21 21:58:55
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\uzytkownicy.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_60089981125511_17819092',
+  'unifunc' => 'content_6009eb0ff3fc67_56043536',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7bc08f059b1ecb29b24c4c5168524e63a7b1b40d' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\uzytkownicy.tpl',
-      1 => 1611176120,
+      1 => 1611262731,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:uzytkownicyCollapsible.tpl' => 1,
   ),
 ),false)) {
-function content_60089981125511_17819092 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6009eb0ff3fc67_56043536 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>

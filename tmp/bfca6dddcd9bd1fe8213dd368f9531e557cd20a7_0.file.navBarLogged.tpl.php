@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-21 16:49:28
+/* Smarty version 3.1.36, created on 2021-01-22 01:23:49
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\navBarLogged.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_6009a28864b8d9_73355524',
+  'unifunc' => 'content_600a1b15eb44f6_45977074',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bfca6dddcd9bd1fe8213dd368f9531e557cd20a7' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\navBarLogged.tpl',
-      1 => 1611244162,
+      1 => 1611274808,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6009a28864b8d9_73355524 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600a1b15eb44f6_45977074 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="navbar navbar-dark bg-dark navbar-expand-lg">
 		
 			<a class="navbar-brand" href="index.php"><img src="./media/logo.png" width="30" height="30" class="d-inline-block mr-2 align-bottom" alt="">Ciekawostki.it</a>
@@ -33,8 +33,10 @@ function content_6009a28864b8d9_73355524 (Smarty_Internal_Template $_smarty_tpl)
 			
 				<ul class="navbar-nav mr-auto">
 				
-					<li class="nav-item mr-2">
-						<a class="nav-link" href="index.php"> Start </a>
+					<li class="nav-item <?php if ((isset($_smarty_tpl->tpl_vars['activeNavItem']->value))) {
+if ($_smarty_tpl->tpl_vars['activeNavItem']->value == "artykuly") {?>active<?php }
+}?> mr-2">
+						<a class="nav-link" href="artykuly.php"> Artykuły </a>
 					</li>
 					
 					<li class="nav-item <?php if ((isset($_smarty_tpl->tpl_vars['activeNavItem']->value))) {
@@ -53,6 +55,12 @@ if ($_smarty_tpl->tpl_vars['activeNavItem']->value == "edycjaDanych") {?>active<
 if ($_smarty_tpl->tpl_vars['activeNavItem']->value == "regulamin") {?>active<?php }
 }?> mr-2">
 						<a class="nav-link" href="regulamin.php"> Regulamin </a>
+					</li>
+
+					<li class="nav-item <?php if ((isset($_smarty_tpl->tpl_vars['activeNavItem']->value))) {
+if ($_smarty_tpl->tpl_vars['activeNavItem']->value == "panelKontaktowy") {?>active<?php }
+}?> mr-2">
+						<a class="nav-link" href="panelKontaktowy.php"> Panel kontaktowy </a>
 					</li>
 
                     <li class="nav-item <?php if ((isset($_smarty_tpl->tpl_vars['activeNavItem']->value))) {

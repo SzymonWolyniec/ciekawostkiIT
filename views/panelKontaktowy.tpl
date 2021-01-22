@@ -6,9 +6,9 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="style_CSS/normalize.css">
-	<link rel="stylesheet" href="style_CSS/styleDodajArtykul.css">
+	<link rel="stylesheet" href="style_CSS/stylePanelKontaktowy.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-	<title>Ciekawostki IT - dodaj artykuł</title>
+	<title>Ciekawostki IT - panel kontaktowy</title>
 </head>
 
 <body>
@@ -22,46 +22,55 @@
         <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-9 col-sm-12 m-auto">
-                    <div class="oknoDodajArtykul">
-                        <div class="dodajArtykul">Dodawanie artykułu</div>
+                    <div class="oknoPanelKontaktowy">
+                        <div class="panelInfo">Panel kontaktowy</div>
+                        <div class="panelOpis">W celu kontaktu z administracją wypełnij poniższy formularz.</div>
 
-                        <div class="status">{if isset($artykulDodanoPoprawnie)}{$artykulDodanoPoprawnie}{/if}</div>
+                        <div class="status">{if isset($wiadomoscWyslana)}{$wiadomoscWyslana}{/if}</div>
                         
     
                             <form method="post">
                             
-                            <div class="artykulTytulInfo">Tytuł</div>
+                            <div class="panelKontaktowyInfo">Tytuł</div>
                             <!-- Title input -->
-                            <input type="text" placeholder="Tytuł artykułu" value="{if isset($artykulTytulZap)}{$artykulTytulZap}{/if}" name="artykulTytul"/>
+                            <input type="text" placeholder="Tytuł" value="{if isset($wiadomoscTytulZap)}{$wiadomoscTytulZap}{/if}" name="wiadomoscTytul"/>
                             
                             <div class="error">
                                 {if isset($e_tytul)} {$e_tytul} {/if}
                             </div>
 
-                            <div class="artykulTextInfo">Tekst</div>
+                            <div class="panelKontaktowyInfo">Tytuł wiadomości</div>
                             <!-- Text input -->
-                            <textarea class="scrollabletextbox" placeholder="Tekst artykułu" name="artykulText">{if isset($artykulTextZap)}{$artykulTextZap}{/if}</textarea>
+                            <textarea class="scrollabletextbox" placeholder="Tekst wiadomości" name="wiadomoscText">{if isset($wiadomoscTextZap)}{$wiadomoscTextZap}{/if}</textarea>
 
                             <div class="error">
                                 {if isset($e_text)} {$e_text} {/if}
+                            </div>
+
+                            <div class="panelKontaktowyInfo">Email kontaktowy</div>
+                            <!-- Contacts details input -->
+                            <input type="text" placeholder="Podaj swojego emaila, na którego otrzymasz odpowiedź zwrotną" value="{if isset($emailKontaktZap)}{$emailKontaktZap}{/if}" name="emailKontakt"/>
+                            
+                            <div class="error">
+                                {if isset($e_emailKontakt)} {$e_emailKontakt} {/if}
                             </div>
                         
                             
                             <div class="container-fluid">
                                 <div class="row">
-                                    {* Added by text *}
+                                    {* UzytkownikInfo text *}
                                     <div class="col-sm-5 col-md-4 col-lg-3 px-0">
-                                        <div class="autorInfo">Autor: </div>
+                                        <div class="uzytkownikInfo">Użytkownik: </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="autorDane">{if isset($login)}{$login}{/if}</div>
+                                        <div class="uzytkownikDane">{if isset($login)}{$login}{/if}</div>
                                     </div>
                                 </div>
                             </div>
                             
 
                             <!-- Save button  -->
-                            <input type="submit" value="Zapisz" name="zapiszDodajArtykul"/>
+                            <input type="submit" value="Wyślij" name="wyslijWiadomoscKontaktowa"/>
                             </form> 
                         
                             <form  action="index.php" method="post">

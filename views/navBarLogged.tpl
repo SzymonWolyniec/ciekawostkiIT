@@ -10,8 +10,8 @@
 			
 				<ul class="navbar-nav mr-auto">
 				
-					<li class="nav-item mr-2">
-						<a class="nav-link" href="index.php"> Start </a>
+					<li class="nav-item {if isset($activeNavItem)}{if $activeNavItem=="artykuly"}active{/if}{/if} mr-2">
+						<a class="nav-link" href="artykuly.php"> Artykuły </a>
 					</li>
 					
 					<li class="nav-item {if isset($activeNavItem)}{if $activeNavItem=="profil"}active{/if}{/if} mr-2">
@@ -24,6 +24,10 @@
 
 					<li class="nav-item {if isset($activeNavItem)}{if $activeNavItem=="regulamin"}active{/if}{/if} mr-2">
 						<a class="nav-link" href="regulamin.php"> Regulamin </a>
+					</li>
+
+					<li class="nav-item {if isset($activeNavItem)}{if $activeNavItem=="panelKontaktowy"}active{/if}{/if} mr-2">
+						<a class="nav-link" href="panelKontaktowy.php"> Panel kontaktowy </a>
 					</li>
 
                     <li class="nav-item {if isset($activeNavItem)}{if $activeNavItem=="wyloguj"}active{/if}{/if} mr-2">
