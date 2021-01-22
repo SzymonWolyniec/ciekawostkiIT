@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-22 02:17:49
+/* Smarty version 3.1.36, created on 2021-01-22 13:13:53
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\panelKontaktowy.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_600a27bd62de73_22631411',
+  'unifunc' => 'content_600ac181a7e530_51990838',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53afe5d109802b7bb36d8c8d8dff690459132b9b' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\panelKontaktowy.tpl',
-      1 => 1611278263,
+      1 => 1611279588,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navBarLogged.tpl' => 1,
   ),
 ),false)) {
-function content_600a27bd62de73_22631411 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600ac181a7e530_51990838 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>

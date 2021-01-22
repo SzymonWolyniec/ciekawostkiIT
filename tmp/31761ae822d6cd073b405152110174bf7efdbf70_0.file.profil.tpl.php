@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-20 22:15:23
+/* Smarty version 3.1.36, created on 2021-01-23 00:09:16
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\profil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_60089d6b12b577_09855461',
+  'unifunc' => 'content_600b5b1c647898_52990495',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31761ae822d6cd073b405152110174bf7efdbf70' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\profil.tpl',
-      1 => 1611177028,
+      1 => 1611356953,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navBarLogged.tpl' => 1,
   ),
 ),false)) {
-function content_60089d6b12b577_09855461 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600b5b1c647898_52990495 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -57,7 +57,7 @@ function content_60089d6b12b577_09855461 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="container">
 
                             <div class="row">
-                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Login:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -69,7 +69,7 @@ echo $_smarty_tpl->tpl_vars['login']->value;
 
 
                             <div class="row">
-                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Email:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -81,7 +81,7 @@ echo $_smarty_tpl->tpl_vars['email']->value;
 
 
                             <div class="row">
-                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Imię:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -93,7 +93,7 @@ echo $_smarty_tpl->tpl_vars['imie']->value;
 
 
                             <div class="row">
-                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Nazwisko:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -105,7 +105,7 @@ echo $_smarty_tpl->tpl_vars['nazwisko']->value;
 
                             </div>
                             <div class="row">
-                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Wiek:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -116,12 +116,23 @@ echo $_smarty_tpl->tpl_vars['wiek']->value;
                             </div>
 
                             <div class="row">
-                                                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Funkcja:</div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['funkcja']->value))) {
 echo $_smarty_tpl->tpl_vars['funkcja']->value;
+}?></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Ostrzeżenia:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane"><?php if ((isset($_smarty_tpl->tpl_vars['ostrzezenia']->value))) {
+echo $_smarty_tpl->tpl_vars['ostrzezenia']->value;
 }?></div>
                                 </div>
                             </div>
@@ -133,8 +144,10 @@ echo $_smarty_tpl->tpl_vars['noweDaneZapisane']->value;
 
 
                         <form  method="get">
+                        <?php if (!(isset($_smarty_tpl->tpl_vars['blokada']->value))) {?>
                             <!-- Edit button  -->
                             <input type="submit" value="Edytuj dane" name="edytujDane"/>
+                        <?php }?>
                             <!-- Logout button  -->
                             <input type="submit" value="Wyloguj" name="wyloguj"/>
                         </form>
@@ -145,7 +158,7 @@ echo $_smarty_tpl->tpl_vars['noweDaneZapisane']->value;
         </div>
 
         <?php } else { ?>
-
+        <?php if (!(isset($_smarty_tpl->tpl_vars['blokada']->value))) {?>
         <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-9 col-sm-12 m-auto">
@@ -254,7 +267,7 @@ echo $_smarty_tpl->tpl_vars['edycjaDanych_regulamin']->value;
                     </diV>
                 </diV>
             </diV>
-
+        <?php }?> 
         <?php }?>       
 	</main>
 	

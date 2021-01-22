@@ -42,10 +42,13 @@
                     $_SESSION['nazwisko'] = $wiersz['surname'];
 					$_SESSION['wiek'] = $wiersz['age'];
 					$_SESSION['funkcja'] = $wiersz['permissionsLevel'];
+					$_SESSION['ostrzezenia'] = $wiersz['warning'];
+
+					
 					
 					unset($_SESSION['blad']);
 					$rezultat->free_result();
-					header('Location: profil.php');	
+					header('Location: index.php');	
 				}
 				else
 				{

@@ -39,6 +39,18 @@ if(isset($_SESSION['email'])) $smarty->assign('email',$_SESSION['email']);
 if(isset($_SESSION['imie'])) $smarty->assign('imie',$_SESSION['imie']);
 if(isset($_SESSION['nazwisko'])) $smarty->assign('nazwisko',$_SESSION['nazwisko']);
 if(isset($_SESSION['wiek'])) $smarty->assign('wiek',$_SESSION['wiek']);
+if(isset($_SESSION['ostrzezenia']))
+{
+    if($_SESSION['ostrzezenia'] > 2)
+    {
+        $smarty->assign('ostrzezenia','<div style ="color:red;">Blokada</div>');
+        $smarty->assign('blokada',$_SESSION['ostrzezenia']);
+    }
+    else
+    {
+        $smarty->assign('ostrzezenia',$_SESSION['ostrzezenia']);
+    }
+} 
 
 if(isset($_SESSION['funkcja']))
 {

@@ -33,7 +33,7 @@
 
                             <div class="row">
                                 {* Login *}
-                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Login:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -44,7 +44,7 @@
 
                             <div class="row">
                                 {* Email *}
-                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Email:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -55,7 +55,7 @@
 
                             <div class="row">
                                 {* Imię *}
-                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Imię:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -66,7 +66,7 @@
 
                             <div class="row">
                                 {* Nazwisko *}
-                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Nazwisko:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -77,7 +77,7 @@
                             </div>
                             <div class="row">
                                 {* Wiek *}
-                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Wiek:</div>
                                 </div>
                                 <div class="col-sm-6">
@@ -87,11 +87,21 @@
 
                             <div class="row">
                                 {* Wiek *}
-                                <div class="col-sm-4 col-md-3 col-lg-2 offset-md-2 offset-lg-3">
+                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
                                 <div class="profilInfo">Funkcja:</div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="profilDane">{if isset($funkcja)}{$funkcja}{/if}</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                {* Ostrzeżenia *}
+                                <div class="col-sm-4 col-md-3 offset-md-2 offset-lg-3">
+                                <div class="profilInfo">Ostrzeżenia:</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="profilDane">{if isset($ostrzezenia)}{$ostrzezenia}{/if}</div>
                                 </div>
                             </div>
                         </div>
@@ -100,8 +110,10 @@
 
 
                         <form  method="get">
+                        {if !isset($blokada)}
                             <!-- Edit button  -->
                             <input type="submit" value="Edytuj dane" name="edytujDane"/>
+                        {/if}
                             <!-- Logout button  -->
                             <input type="submit" value="Wyloguj" name="wyloguj"/>
                         </form>
@@ -112,7 +124,7 @@
         </div>
 
         {else}
-
+        {if !isset($blokada)}
         <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-9 col-sm-12 m-auto">
@@ -190,7 +202,7 @@
                     </diV>
                 </diV>
             </diV>
-
+        {/if} 
         {/if}       
 	</main>
 	

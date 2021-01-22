@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-22 01:23:49
+/* Smarty version 3.1.36, created on 2021-01-22 23:00:02
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\navBarLogged.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_600a1b15eb44f6_45977074',
+  'unifunc' => 'content_600b4ae27d3212_77859760',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bfca6dddcd9bd1fe8213dd368f9531e557cd20a7' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\navBarLogged.tpl',
-      1 => 1611274808,
+      1 => 1611352794,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_600a1b15eb44f6_45977074 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600b4ae27d3212_77859760 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="navbar navbar-dark bg-dark navbar-expand-lg">
 		
 			<a class="navbar-brand" href="index.php"><img src="./media/logo.png" width="30" height="30" class="d-inline-block mr-2 align-bottom" alt="">Ciekawostki.it</a>
@@ -86,7 +86,7 @@ if ($_smarty_tpl->tpl_vars['activeNavItem']->value == "panelAdministratora") {?>
 									
 									<div class="dropdown-divider"></div>
 									
-									<a class="dropdown-item" href="#">Poczta</a>
+									<a class="dropdown-item" href="poczta.php">Poczta</a>
 
 								</div>
 							</li>

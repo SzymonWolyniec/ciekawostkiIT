@@ -7,19 +7,23 @@ $smarty = new Smarty();
 $smarty->template_dir = 'views';
 $smarty->compile_dir = 'tmp';
 $smarty->cache_dir = 'cache';
-$smarty->clearCache('artykulSzczegoly.tpl');
+$smarty->clearCache('edycjaArtykul.tpl');
 
-if(!isset($_SESSION['zalogowany']) || $_SESSION['ostrzezenia'] > 2)
+if(!isset($_SESSION['zalogowany']))
 { 
     header('Location: index.php');
     exit();
 }
-
-
-if(isset($_GET['id']))
+elseif ($_SESSION['funkcja'] == 1)
 {
-    $smarty->assign('artykulId', $_GET['id']);
-    $articleId = $_GET['id'];
+    header('Location: index.php');
+    exit();
+}
+
+if(isset($_GET['artykulId']))
+{
+    $smarty->assign('artykulId', $_GET['artykulId']);
+    $articleId = $_GET['artykulId'];
 
     // Select article with id = $_GET
 
@@ -47,21 +51,7 @@ if(isset($_GET['id']))
                     $smarty->assign('artykulTytul', $wiersz['title']);
                     $smarty->assign('artykulText', $wiersz['text']);
                     $smarty->assign('artykulData', $wiersz['createDate']);
-                    $smarty->assign('artykulKomentarzeLiczba', $wiersz['comments']);
                     $autorId = $wiersz['createByUserId'];
-
-                    $fileName = $wiersz['id'];
-
-                    if (file_exists('media/article/'.$fileName.".png")) 
-                    {
-                        $image="./media/article/".$fileName.".png";
-                    }
-                    else
-                    {
-                        $image="./media/article/default.png";
-                    }
-
-                    $smarty->assign('image',$image);
 
                     if($rezultatAutor = $polaczenie->query("SELECT login FROM uzytkownicy WHERE id=$autorId"))
                     {
@@ -73,9 +63,9 @@ if(isset($_GET['id']))
                     {
                         throw new Exception(mysqli_connect_errno());
                     }
-                    
-                    // Pobieranie komentarzy
-                    require_once "artykulSzczegolyPobierzKomentarze.php";
+
+                    // Edycja artykułu
+                    require_once "edycjaArtykulZapisz.php";
                     
                 }
                 else
@@ -106,19 +96,20 @@ else
     $smarty->assign('brakArtykuluId', "Nie podano ID artykułu");
 }
 
-// Dodawanie komentarza
-require_once "artykulSzczegolyDodajKomentarz.php";
 
 
-if(isset($_SESSION['poprawnieUsunietoKomentarz']))
+
+
+if(isset($_SESSION['poprawnieEdytowanoArtykul']))
 {
-    $smarty->assign('poprawnieUsunietoKomentarz', $_SESSION['poprawnieUsunietoKomentarz']);
-    unset($_SESSION['poprawnieUsunietoKomentarz']);
+    $smarty->assign('poprawnieEdytowanoArtykul', $_SESSION['poprawnieEdytowanoArtykul']);
+    unset($_SESSION['poprawnieEdytowanoArtykul']);
 }
 
-if(isset($_SESSION['id']))
+
+if(isset($_SESSION['login']))
 {
-    $smarty->assign('userId', $_SESSION['id']);
+    $smarty->assign('login', $_SESSION['login']);
 }
 
 if(isset($_SESSION['funkcja']))
@@ -126,5 +117,5 @@ if(isset($_SESSION['funkcja']))
     $smarty->assign('funkcjaNumer', $_SESSION['funkcja']);
 }
 $smarty->assign('activeNavItem',"artykuly");
-$smarty->display('artykulSzczegoly.tpl');
+$smarty->display('edycjaArtykul.tpl');
 ?>

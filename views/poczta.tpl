@@ -6,9 +6,9 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="style_CSS/normalize.css">
-	<link rel="stylesheet" href="style_CSS/styleUzytkownicy.css">
+	<link rel="stylesheet" href="style_CSS/stylePoczta.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-	<title>Ciekawostki IT - użytkownicy</title>
+	<title>Ciekawostki IT - poczta</title>
 </head>
 
 <body>
@@ -21,9 +21,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 m-auto">
-					<div class="oknoUzytkownicy">
+					<div class="oknoPoczta">
 
-						<div class="uzytkownicyTxt">Użytkownicy ({$uzytkownicyFromDB|@count})</div>
+						<div class="pocztaTxt">Poczta ({$pocztaFromDB|@count})</div>
 
                         <form method="post">
                             <!-- Expand button  -->
@@ -33,74 +33,56 @@
                         </form>
 
                         <div class="oknoRozwijanychPrzyciskow">
-                            {foreach $uzytkownicyFromDB as $uzytkownik}
+                            {foreach $pocztaFromDB as $wiadomosc}
 
-                                <button class="collapsible" style="{if $uzytkownik.permissionsLevel == 4}font-weight:bold;color:aqua;{elseif $uzytkownik.permissionsLevel == 3}font-weight:bold;color:greenyellow;{/if}">{$uzytkownik.login}</button>
+                                <button class="collapsible">
+                                    [{$wiadomosc.sendDate}]&nbsp&nbsp&nbsp{$wiadomosc.title}
+                                </button>
                                 <div class="content">
-                                    <div class="uzytkownik">
+                                    <div class="wiadomosc">
 
                                         <div class="container-fluid">
-
-                                            <div class="row no-gutters">
-                                                {* Edit Btn *}
-                                                <div class="col-sm-12 editBtnContainer">
-                                                    <form  action="edycjaUzytkownik.php" method="get">
-                                                        <Button class="editBtn" type="submit" value="{$uzytkownik.id}" name="uzytkownikId">
-                                                            <img src="./media/edit.png" width="25" height="25">
-                                                        </Button>
-                                                    </form>
-                                                </div>
-                                            </div>
                                             
                                             <div class="row no-gutters">
-                                                {* ID *}
+                                                {* Sender login *}
                                                 <div class="col-sm-5 col-md-4 col-lg-3 ">
-                                                    <div class="uzytkownikInfo">ID:</div>
+                                                    <div class="uzytkownikInfo">Nadawca:</div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <div class="uzytkownikDane">{$uzytkownik.id}</div>
+                                                    <div class="uzytkownikDane">{$wiadomosc.login}</div>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
-                                                    {* Email *}
+                                                {* Sender id *}
                                                 <div class="col-sm-5 col-md-4 col-lg-3 ">
-                                                    <div class="uzytkownikInfo">Email:</div>
+                                                    <div class="uzytkownikInfo">Nadawca ID:</div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <div class="uzytkownikDane">{$uzytkownik.email}</div>
+                                                    <div class="uzytkownikDane">{$wiadomosc.userId}</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row no-gutters">
+                                                    {* Text *}
+                                                <div class="col-sm-5 col-md-4 col-lg-3 ">
+                                                    <div class="uzytkownikInfo">Wiadomość:</div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="uzytkownikDane">{$wiadomosc.text}</div>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
                                                     {* Imię i nazwisko *}
                                                 <div class="col-sm-5 col-md-4 col-lg-3">
-                                                    <div class="uzytkownikInfo">Imię i nazwisko:</div>
+                                                    <div class="uzytkownikInfo">Email kontaktowy:</div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <div class="uzytkownikDane">{$uzytkownik.name} {$uzytkownik.surname}</div>
+                                                    <div class="uzytkownikDane">{$wiadomosc.emailContact}</div>
                                                 </div>
                                             </div>
 
-                                            <div class="row no-gutters">
-                                                    {* Wiek *}
-                                                <div class="col-sm-5 col-md-4 col-lg-3 ">
-                                                    <div class="uzytkownikInfo">Wiek:</div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="uzytkownikDane">{$uzytkownik.age}</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row no-gutters">
-                                                    {* Ostrzeżenia *}
-                                                <div class="col-sm-5 col-md-4 col-lg-3 ">
-                                                    <div class="uzytkownikInfo">Ostrzeżenia:</div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="uzytkownikDane">{$uzytkownik.warning}</div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

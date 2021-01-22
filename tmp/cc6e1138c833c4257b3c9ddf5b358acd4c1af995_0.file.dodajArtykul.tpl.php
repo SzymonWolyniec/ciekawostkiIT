@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-21 21:57:51
+/* Smarty version 3.1.36, created on 2021-01-22 16:03:47
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\dodajArtykul.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_6009eacf9f65f7_28360370',
+  'unifunc' => 'content_600ae9531ef595_16645591',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc6e1138c833c4257b3c9ddf5b358acd4c1af995' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\dodajArtykul.tpl',
-      1 => 1611262645,
+      1 => 1611274983,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navBarLogged.tpl' => 1,
   ),
 ),false)) {
-function content_6009eacf9f65f7_28360370 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600ae9531ef595_16645591 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>

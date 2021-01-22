@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-21 21:58:55
+/* Smarty version 3.1.36, created on 2021-01-22 23:48:01
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\uzytkownicy.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_6009eb0ff3fc67_56043536',
+  'unifunc' => 'content_600b5621533362_58182983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7bc08f059b1ecb29b24c4c5168524e63a7b1b40d' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\uzytkownicy.tpl',
-      1 => 1611262731,
+      1 => 1611355678,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:uzytkownicyCollapsible.tpl' => 1,
   ),
 ),false)) {
-function content_6009eb0ff3fc67_56043536 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600b5621533362_58182983 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -84,9 +84,7 @@ $_smarty_tpl->tpl_vars['uzytkownik']->do_else = false;
                                                     </form>
                                                 </div>
                                             </div>
-
                                             
-
                                             <div class="row no-gutters">
                                                                                                 <div class="col-sm-5 col-md-4 col-lg-3 ">
                                                     <div class="uzytkownikInfo">ID:</div>
@@ -130,19 +128,11 @@ $_smarty_tpl->tpl_vars['uzytkownik']->do_else = false;
 
                                             <div class="row no-gutters">
                                                                                                     <div class="col-sm-5 col-md-4 col-lg-3 ">
-                                                    <div class="uzytkownikInfo">Komentarze:</div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="uzytkownikDane">!!!</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row no-gutters">
-                                                                                                    <div class="col-sm-5 col-md-4 col-lg-3 ">
                                                     <div class="uzytkownikInfo">Ostrzeżenia:</div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <div class="uzytkownikDane">!!!</div>
+                                                    <div class="uzytkownikDane"><?php echo $_smarty_tpl->tpl_vars['uzytkownik']->value['warning'];?>
+</div>
                                                 </div>
                                             </div>
                                         </div>

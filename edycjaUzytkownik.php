@@ -90,6 +90,10 @@ if(isset($_GET['uzytkownikId']))
     } 
 
 }
+else
+{
+    $smarty->assign('brakUzytkownikaId', "Nie podano ID użytkownika");
+}
 
 
 

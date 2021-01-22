@@ -50,7 +50,7 @@
 									
 									<div class="dropdown-divider"></div>
 									
-									<a class="dropdown-item" href="#">Poczta</a>
+									<a class="dropdown-item" href="poczta.php">Poczta</a>
 
 								</div>
 							</li>

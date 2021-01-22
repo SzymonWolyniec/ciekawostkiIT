@@ -16,19 +16,18 @@ PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 
-
-
 CREATE TABLE IF NOT EXISTS `artykuly` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `title` text COLLATE utf8_polish_ci NOT NULL,
 `text` text COLLATE utf8_polish_ci NOT NULL,
-`createByUserId` int(11) NOT NUL,
+`createByUserId` int(11) NOT NULL,
 `createDate` datetime NOT NULL,
-`lastEditByUserId` int(11) NOT NUL,
+`lastEditByUserId` int(11) NOT NULL,
 `lastEditDate` datetime  NOT NULL,
 `comments` int(4) NOT NULL,
 PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
 
 CREATE TABLE IF NOT EXISTS `panelKontaktowy` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -39,6 +38,20 @@ CREATE TABLE IF NOT EXISTS `panelKontaktowy` (
 `sendDate` datetime  NOT NULL,
 PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+
+CREATE TABLE IF NOT EXISTS `komentarze` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`articleId` int(11) NOT NULL,
+`title` text COLLATE utf8_polish_ci NOT NULL,
+`text` text COLLATE utf8_polish_ci NOT NULL,
+`createByUserId` int(11) NOT NULL,
+`createDate` datetime NOT NULL,
+`lastEditByUserId` int(11) NOT NULL,
+`lastEditDate` datetime  NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
 
 
 

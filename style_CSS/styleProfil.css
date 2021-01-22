@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #FFF;
+    margin-bottom: 100px;
 }
 
 .oknoProfilu {
@@ -99,21 +100,3 @@ input[type=submit]:hover {
     padding-top: 20px;
     text-align: center;
 }
-
-/* .container {
-    display: table;
-}
-
-.container>.row {
-    display: table-row;
-} 
-
- .container>.row>* {
-    display: table-cell;
-    padding: 5px;
-    white-space: nowrap;
-}
-
-.col {
-    width: 100%;
-} */

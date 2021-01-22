@@ -12,8 +12,15 @@ $smarty->clearCache('index.tpl');
 	// Auto login
 	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']=true))
 	{
-		header('Location: artykuly.php');
-		exit();
+		if($_SESSION['ostrzezenia'] < 3)
+		{
+			header('Location: artykuly.php');
+			exit();
+		}
+		else
+		{
+			header('Location: profil.php');
+		}
 	}	
 	else
 	{

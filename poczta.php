@@ -1,21 +1,27 @@
 <?php
-
 session_start();
+    
 
 require_once('libs/Smarty.class.php');
 $smarty = new Smarty();
 $smarty->template_dir = 'views';
 $smarty->compile_dir = 'tmp';
 $smarty->cache_dir = 'cache';
-$smarty->clearCache('artykuly.tpl');
+$smarty->clearCache('poczta.tpl');
 
-if(!isset($_SESSION['zalogowany']) || $_SESSION['ostrzezenia'] > 2)
+if(!isset($_SESSION['zalogowany']))
 { 
     header('Location: index.php');
     exit();
 }
+elseif ($_SESSION['funkcja'] == 1)
+{
+    header('Location: index.php');
+    exit();
+}
 
-// Select all article
+
+// Select all messages
 
 require_once"connectDB.php";
 mysqli_report(MYSQLI_REPORT_STRICT);
@@ -30,27 +36,28 @@ try
 	}
 	else
 	{
-		if($rezultat = $polaczenie->query("SELECT * FROM artykuly ORDER BY id DESC"))
+		if($rezultat = $polaczenie->query("SELECT * FROM panelkontaktowy ORDER BY id DESC"))
         {
             
             while ($wiersz = $rezultat->fetch_assoc())
-            {
-                $artykulyFromDB[] = $wiersz;
+            {   
+                $senderId = $wiersz['userId'];
                 
-                $fileName = $wiersz['id'];
-
-                if (file_exists('media/article/'.$fileName.".png")) 
+                
+                if($rezultatLogin = $polaczenie->query("SELECT login FROM uzytkownicy WHERE id=$senderId"))
                 {
-                    $imagesTab[]="./media/article/".$fileName.".png";
+                    $wierszLogin = $rezultatLogin->fetch_assoc();
+                    
+                    $wiersz += ['login' => $wierszLogin['login']];
+                    $pocztaFromDB[] = $wiersz;
+                    $smarty->assign('pocztaFromDB',$pocztaFromDB);
                 }
                 else
                 {
-                    $imagesTab[]="./media/article/default.png";
+                    throw new Exception(mysqli_connect_errno());
                 }
-            }
-            
-            $smarty->assign('imagesTab',$imagesTab);
-            $smarty->assign('artykulyFromDB',$artykulyFromDB);
+
+            }     
         }	
         else
         {
@@ -69,11 +76,22 @@ catch(Exception $e)
     exit();		
 } 
 
+if(isset($_POST['expand']))
+{
+    $smarty->assign('expand', true);
+}
+
+if(isset($_POST['collapse']))
+{
+    $smarty->assign('collapse', true);
+}
+
 
 if(isset($_SESSION['funkcja']))
 {
     $smarty->assign('funkcjaNumer', $_SESSION['funkcja']);
+
 }
-$smarty->assign('activeNavItem',"artykuly");
-$smarty->display('artykuly.tpl');
+$smarty->assign('activeNavItem',"panelAdministratora");
+$smarty->display('poczta.tpl');
 ?>
