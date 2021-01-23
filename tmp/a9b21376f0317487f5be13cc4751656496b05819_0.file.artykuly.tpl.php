@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-22 01:17:23
+/* Smarty version 3.1.36, created on 2021-01-23 01:11:08
   from 'E:\Programy\Xampp\htdocs\ciekawostkiIT\views\artykuly.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_600a19933d9cc4_77590092',
+  'unifunc' => 'content_600b699c347542_24355310',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9b21376f0317487f5be13cc4751656496b05819' => 
     array (
       0 => 'E:\\Programy\\Xampp\\htdocs\\ciekawostkiIT\\views\\artykuly.tpl',
-      1 => 1611274637,
+      1 => 1611359247,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navBarLogged.tpl' => 1,
   ),
 ),false)) {
-function content_600a19933d9cc4_77590092 (Smarty_Internal_Template $_smarty_tpl) {
+function content_600b699c347542_24355310 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang = "pl">
 <head>
@@ -54,6 +54,7 @@ function content_600a19933d9cc4_77590092 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="container">
                             <div class="row"> <!-- no-gutters -->
 
+                            <?php if ((isset($_smarty_tpl->tpl_vars['artykulyFromDB']->value))) {?>
                             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['artykulyFromDB']->value, 'artykul', false, NULL, 'myFore', array (
   'index' => true,
@@ -63,8 +64,6 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['artykul']->value
 $_smarty_tpl->tpl_vars['artykul']->do_else = false;
 $_smarty_tpl->tpl_vars['__smarty_foreach_myFore']->value['index']++;
 ?>
-
-                                
 
                                 <div class="col-md-6 col-lg-4 py-3">
                                     <div class="customBorder">
@@ -84,6 +83,7 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_myFore']->value['index']++;
                             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                            <?php }?>
 					
                             </div>
                         </div>

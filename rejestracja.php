@@ -175,7 +175,7 @@ if(isset($_POST['email']))
 				if($wszystko_Ok==true)
 				{	
 
-					if ($polaczenie->query("INSERT INTO uzytkownicy VALUES (NULL, '$login', '$h_haslo', '$email', '$imie', '$nazwisko', '$wiek', 1)"))
+					if ($polaczenie->query("INSERT INTO uzytkownicy VALUES (NULL, '$login', '$h_haslo', '$email', '$imie', '$nazwisko', '$wiek', 1,0)"))
 					{
 						$_SESSION['udanarejestracja']=true;
 						header('Location: rejestracjaPoprawna.php');

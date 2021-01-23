@@ -29,9 +29,8 @@
                         <div class="container">
                             <div class="row"> <!-- no-gutters -->
 
+                            {if isset($artykulyFromDB)}
                             {foreach $artykulyFromDB as $artykul name="myFore"}
-
-                                
 
                                 <div class="col-md-6 col-lg-4 py-3">
                                     <div class="customBorder">
@@ -46,6 +45,7 @@
                                 </div>
 
                             {/foreach}
+                            {/if}
 					
                             </div>
                         </div>

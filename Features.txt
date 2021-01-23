@@ -1,5 +1,0 @@
-SuperAdmin: zmiana danych użytkowników, nadawanie permissionsLevel (3 = moderator), dodawanie/usuwanie/edycja artykułów, banowanie użytkowników (nadawanie ostrzeżeń, które kasują się po miesiącu)
-Moderator: wszystko co Admin BEZ MOŻLIWOŚCI: zmiany permissionsLevel, danych użytkowników innych niż z permissionsLevel 1
-Użytkownik: Komentowanie/usuwanie/edycja swojego komentarza, ocena artykułów, zmiana swoich danych, wyszukiwanie art
-
-Inne: Kontakt z administracją (~ między użytkownikami)

@@ -23,7 +23,7 @@
 				<div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 m-auto">
 					<div class="oknoPoczta">
 
-						<div class="pocztaTxt">Poczta ({$pocztaFromDB|@count})</div>
+						<div class="pocztaTxt">Poczta ({if isset($pocztaFromDB)}{$pocztaFromDB|@count}{else}0{/if})</div>
 
                         <form method="post">
                             <!-- Expand button  -->
@@ -33,6 +33,7 @@
                         </form>
 
                         <div class="oknoRozwijanychPrzyciskow">
+                            {if isset($pocztaFromDB)}
                             {foreach $pocztaFromDB as $wiadomosc}
 
                                 <button class="collapsible">
@@ -88,6 +89,7 @@
                                 </div>
 
                             {/foreach}
+                            {/if}
 						</div>
 					</div>
 				</div>

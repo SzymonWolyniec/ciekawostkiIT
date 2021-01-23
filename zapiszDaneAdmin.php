@@ -243,6 +243,18 @@ if(isset($_POST['zapiszDane']) && !$brakUzytkownikaId)
                         if ($polaczenie->query($query))
                         {        
                             $_SESSION['noweDaneZapisane'] = 'Zapisano nowe dane';
+
+                            if($id == $_SESSION['id'])
+                            {
+                                $_SESSION['zalogowany']=true;					
+                                $_SESSION['login'] = $login;
+                                $_SESSION['email'] = $email;
+                                $_SESSION['imie'] = $imie;
+                                $_SESSION['nazwisko'] = $nazwisko;
+                                $_SESSION['wiek'] = $wiek;
+                                $_SESSION['funkcja'] = $funkcja;
+                                $_SESSION['ostrzezenia'] = $ostrzezenia;
+                            }
                             
                             // header('Location: uzytkownicy.php');
                             // exit();

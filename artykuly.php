@@ -47,10 +47,12 @@ try
                 {
                     $imagesTab[]="./media/article/default.png";
                 }
+
+                $smarty->assign('imagesTab',$imagesTab);
+                $smarty->assign('artykulyFromDB',$artykulyFromDB);
             }
             
-            $smarty->assign('imagesTab',$imagesTab);
-            $smarty->assign('artykulyFromDB',$artykulyFromDB);
+            
         }	
         else
         {
